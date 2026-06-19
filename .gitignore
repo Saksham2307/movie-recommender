@@ -1,5 +1,5 @@
 __pycache__/
-*.pkl
+similarity.pkl
 .env
 .DS_Store
 *.csv
