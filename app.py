@@ -5,9 +5,21 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 
 # ── Load data ─────────────────────────────────────────────────
+# ── Load data ─────────────────────────────────────────────────
+import gdown
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 movies = pickle.load(open(os.path.join(BASE_DIR, 'movies.pkl'), 'rb'))
-similarity = pickle.load(open(os.path.join(BASE_DIR, 'similarity.pkl'), 'rb'))
+
+similarity_path = os.path.join(BASE_DIR, 'similarity.pkl')
+if not os.path.exists(similarity_path):
+    gdown.download(
+        "https://drive.google.com/uc?id=1NtIxeZ85uoWP34PZoS0lJwY6wA46pA8d",
+        similarity_path,
+        quiet=False
+    )
+similarity = pickle.load(open(similarity_path, 'rb'))
 
 # ── Page config ──────────────────────────────────────────────
 st.set_page_config(
