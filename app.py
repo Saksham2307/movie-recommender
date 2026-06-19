@@ -180,7 +180,8 @@ st.markdown('<div class="fancy-divider"></div>', unsafe_allow_html=True)
 
 # ── Functions ─────────────────────────────────────────────────
 def fetch_poster(movie_title):
-    url = f"https://api.themoviedb.org/3/search/movie?api_key=8e1b6bb883d2bafd02d7754a98d9ef49&query={movie_title}"
+    api_key = st.secrets["TMDB_API_KEY"]
+url = f"https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={movie_title}"
     try:
         response = requests.get(url, timeout=5)
         data = response.json()
