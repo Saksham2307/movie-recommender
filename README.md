@@ -6,7 +6,7 @@ A content-based movie recommendation web app built with Python and Streamlit. Pi
 
 ## 🚀 Live Demo
 
-> Coming soon (Streamlit Cloud)
+> > [🚀 Open Live App](https://movie-recommender-v8svfvggmofu43fqirz927.streamlit.app)
 
 ---
 
