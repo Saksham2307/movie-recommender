@@ -12,7 +12,7 @@ A content-based movie recommendation web app built with Python and Streamlit. Pi
 
 ## 📸 Screenshot
 
-> *(Add a screenshot of the app here)*
+> ![CineMatch Screenshot](screenshot.png)
 
 ---
 
